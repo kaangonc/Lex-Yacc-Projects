@@ -1,0 +1,59 @@
+START
+	!!EXAMPLE PROGRAM1!!
+	float data ;
+	int x = 100 ;
+	for ( int i = 0 ; i <= x ; i = i + 1 )
+	<<
+		if ( i =? 0)
+		<<
+			Grab ( ) ;
+		>>
+		 if ( i =; 1 )
+		<<
+			Release ( ) ;
+		>>
+		 if ( i * 2 < x && i >= 3 )
+		<<
+			Turn ( 10 ) ;
+		>>
+		if ( i - 2 ~=? x || i < 20 )
+		<<
+			data = Read ( 1111 ) ;
+		>>
+		if ( i / 3 > 10 )
+		<<
+			data = Receive ( 2222 ) ;
+		>>
+		 if ( i + 2 <= 20 )
+		<<
+			Send ( 3333 ) ;
+		>>
+	>>
+END
+START
+	!!EXAMPLE PROGRAM2!!
+	void Fly ( int height , int velocity )
+	<<
+		return ;
+	>>
+	
+	int steps = 5 ;
+	int height = 20 ;
+	int velocity = 40 ;
+	boolean check = wrong ;
+	check = ~ check ;
+	while ( check )
+	<<
+		Move ( steps ) ;
+		if ( height =? 0 )
+		<<
+			Fly ( height , velocity ) ;
+			check = wrong ;
+		>>
+           else
+            <<
+                      print(“Height is not equal to 0”);
+            >>
+		height = height - 1 ;
+	>>
+END
