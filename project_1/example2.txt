@@ -1,0 +1,23 @@
+start
+	!!EXAMPLE PROGRAM2!!
+	void Fly ( int height , int velocity )
+	<<
+		return ?
+	>>
+	
+	int steps = 5 ?
+	int height = 20 ?
+	int velocity = 40 ?
+	boolean check = wrong ?
+	check = ~ check ?
+	while ( check )
+	<<
+		Move ( steps ) ?
+		if ( height =? 0 )
+		<<
+			Fly ( height , velocity ) ?
+			check = wrong ?
+		>>
+		height = height - 1 ?
+	>>
+end

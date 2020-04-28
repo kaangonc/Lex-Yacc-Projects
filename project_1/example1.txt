@@ -1,0 +1,32 @@
+start
+	!!EXAMPLE PROGRAM1!!
+	float data ?
+	int x = 100 ?
+	for ( int i = 0 ? i <= x ? i = i + 1 )
+	<<
+		if ( i =? 0)
+		<<
+			Grab ( ) ?
+		>>
+		else if ( i =? 1 )
+		<<
+			Release ( ) ?
+		>>
+		else if ( i * 2 < x && i >= 3 )
+		<<
+			Turn ( 10 ) ?
+		>>
+		else if ( i - 2 ~=? x || i < 20 )
+		<<
+			data = Read ( 1111 ) ?
+		>>
+		else if ( i / 3 > 10 )
+		<<
+			data = Receive ( 2222 ) ?
+		>>
+		else if ( i + 2 <= 20 )
+		<<
+			Send ( 3333 ) ?
+		>>
+	>>
+end
